@@ -1,3 +1,7 @@
+<?php
+include('admin/db_connection.php')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
   <!--First Navbar: The Green One-->  
   <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #75db8f;">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bolder" href="Home.html" style="font-variant: small-caps;">Sugab Store</a>
+          <a class="navbar-brand fw-bolder" href="Home.php" style="font-variant: small-caps;">Sugab Store</a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item px-1">
@@ -54,9 +58,17 @@
                 Category
               </button>
               <ul class="dropdown-menu position absolute" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#">Elektronik</a></li>
-                <li><a class="dropdown-item" href="#">Fashion</a></li>
-                <li><a class="dropdown-item" href="#">Gaming</a></li>
+              <?php
+                $select_category="Select * from `category`";
+                $result_category=mysqli_query($con,$select_category);
+                while($row_data=mysqli_fetch_assoc($result_category)){
+                  $cat_name=$row_data['cat_name'];
+                  $cat_id=$row_data['cat_id'];
+                  echo " <li class='nav-item'>
+                  <a href='home.php?category=$cat_id' class='nav-link text-dark'>$cat_name</a>
+                  </li>";
+                }
+                ?>
               </ul>
             </div>
           </div>
