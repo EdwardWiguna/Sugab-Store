@@ -1,15 +1,14 @@
 <?php
 
  $host = "localhost";
- $user = "root";
- $pass = "1234";
+ $user = "SugabStore_Edit";
+ $pass = "iQF050f.of]fC*f[";
  $db = "ecommerce";
  
  $con = mysqli_connect($host,$user,$pass,$db);
- if(!$con){
-    echo "Connection Success!";
- }
 
- 
+ if(!$con){
+    echo" Connected";
+ }
 ?>
    

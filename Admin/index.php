@@ -10,12 +10,12 @@
 <body>
     <nav class="navbar navbar-expand-lg" style="background-color: #75db8f;">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bolder" href="../Home.html" style="font-variant: small-caps;">Sugab Store</a>
+          <a class="navbar-brand fw-bolder" href="../Home.php" style="font-variant: small-caps;">Sugab Store</a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
 
               <li class="nav-item px-1">
-                <a class="nav-link active" aria-current="page" href="Catalog.html">Product</a>
+                <a class="nav-link active" aria-current="page" href="Catalog.php">Product</a>
               </li>
               <li class="nav-item px-1">
                 <a class="nav-link" href="#">Shop</a>
